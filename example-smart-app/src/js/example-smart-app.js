@@ -30,10 +30,12 @@
 
           var fname = '';
           var lname = '';
+          var pname = '';
 
           if (typeof patient.name[0] !== 'undefined') {
             fname = patient.name[0].given.join(' ');
             lname = patient.name[0].family.join(' ');
+            pname = patient.name[0];
           }
 
           var height = byCodes('8302-2');
@@ -48,7 +50,7 @@
           p.fname = fname;
           p.lname = lname;
           p.height = getQuantityValueAndUnit(height[0]);
-          p.name = patient.name;
+          p.pname = pname;
 
           if (typeof systolicbp != 'undefined')  {
             p.systolicbp = systolicbp;
@@ -84,7 +86,7 @@
       diastolicbp: {value: ''},
       ldl: {value: ''},
       hdl: {value: ''},
-      name : {value: ''},
+      pname : {value: ''},
     };
   }
 
@@ -128,7 +130,7 @@
     $('#diastolicbp').html(p.diastolicbp);
     $('#ldl').html(p.ldl);
     $('#hdl').html(p.hdl);
-    $('#name').html(p.name);
+    $('#pname').html(p.pname);
   };
 
 })(window);
