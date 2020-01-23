@@ -48,7 +48,7 @@
           p.fname = fname;
           p.lname = lname;
           p.height = getQuantityValueAndUnit(height[0]);
-          p.telecom = patient.telecom;
+          p.address = patient.address;
 
           if (typeof systolicbp != 'undefined')  {
             p.systolicbp = systolicbp;
@@ -84,7 +84,7 @@
       diastolicbp: {value: ''},
       ldl: {value: ''},
       hdl: {value: ''},
-      telecom : {value: ''}
+      address : {value: ''}
     };
   }
 
@@ -128,7 +128,7 @@
     $('#diastolicbp').html(p.diastolicbp);
     $('#ldl').html(p.ldl);
     $('#hdl').html(p.hdl);
-    $('#telecom').html(p.telecom);
+    $('#address').html(p.address);
   };
 
 })(window);
