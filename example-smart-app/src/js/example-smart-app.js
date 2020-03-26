@@ -27,7 +27,7 @@
         $.when(pt, obv).done(function(patient, obv) {
           var byCodes = smart.byCodes(obv, 'code');
           var gender = patient.gender;
-          var state = patient.address.state;
+          var age = patient.age;
 
           var fname = '';
           var lname = '';             
@@ -48,7 +48,7 @@
           p.gender = gender;
           p.fname = fname;
           p.lname = lname;
-          p.state = state;
+          p.age = age;
           p.height = getQuantityValueAndUnit(height[0]);          
         
           if (typeof systolicbp != 'undefined')  {
@@ -85,7 +85,7 @@
       diastolicbp: {value: ''},
       ldl: {value: ''},
       hdl: {value: ''},
-      state : {value: ''},      
+      age : {value: ''},      
     };
   }
 
@@ -129,7 +129,7 @@
     $('#diastolicbp').html(p.diastolicbp);
     $('#ldl').html(p.ldl);
     $('#hdl').html(p.hdl);
-    $('#state').html(p.state); 
+    $('#age').html(p.age); 
   };
 
 })(window);
