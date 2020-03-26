@@ -44,11 +44,11 @@
           var ldl = byCodes('2089-1');
 
           var p = defaultPatient();
-          p.birthdate = new Date(patient.birthDate);
+          p.birthdate = patient.birthDate;
           p.gender = gender;
           p.fname = fname;
           p.lname = lname;
-          p.age = parseInt(calculateAge(p.birthdate));
+         // p.age = parseInt(calculateAge(p.birthdate));
           p.height = getQuantityValueAndUnit(height[0]);          
         
           if (typeof systolicbp != 'undefined')  {
@@ -85,7 +85,7 @@
       diastolicbp: {value: ''},
       ldl: {value: ''},
       hdl: {value: ''},
-      age : {value: ''},      
+     // age : {value: ''},      
     };
   }
 
@@ -129,7 +129,7 @@
     $('#diastolicbp').html(p.diastolicbp);
     $('#ldl').html(p.ldl);
     $('#hdl').html(p.hdl);
-    $('#age').html(p.age); 
+   // $('#age').html(p.age); 
   };
 
 })(window);
