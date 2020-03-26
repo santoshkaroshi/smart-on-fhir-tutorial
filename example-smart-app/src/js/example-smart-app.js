@@ -27,7 +27,7 @@
         $.when(pt, obv).done(function(patient, obv) {
           var byCodes = smart.byCodes(obv, 'code');
           var gender = patient.gender;
-          var age = patient.age;
+          var age = '';
 
           var fname = '';
           var lname = '';             
@@ -44,11 +44,11 @@
           var ldl = byCodes('2089-1');
 
           var p = defaultPatient();
-          p.birthdate = patient.birthDate;
+          p.birthdate = new Date(patient.birthDate);
           p.gender = gender;
           p.fname = fname;
           p.lname = lname;
-          p.age = age;
+          p.age = parseInt(calculateAge(p.birthdate));
           p.height = getQuantityValueAndUnit(height[0]);          
         
           if (typeof systolicbp != 'undefined')  {
