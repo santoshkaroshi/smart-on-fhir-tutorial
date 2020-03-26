@@ -49,7 +49,7 @@
           p.fname = fname;
           p.lname = lname;         
           p.height = getQuantityValueAndUnit(height[0]);   
-          p.age =  parseInt(calculateAge(new Date(patient.birthDate)));
+          p.age = 25 ;
         
           if (typeof systolicbp != 'undefined')  {
             p.systolicbp = systolicbp;
