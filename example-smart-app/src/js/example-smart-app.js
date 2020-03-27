@@ -49,7 +49,7 @@
           p.fname = fname;
           p.lname = lname;         
           p.height = getQuantityValueAndUnit(height[0]);   
-          p.phone = patient.phone;
+          p.phone = phone;
         
           if (typeof systolicbp != 'undefined')  {
             p.systolicbp = systolicbp;
