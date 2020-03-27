@@ -29,6 +29,7 @@
           var gender = patient.gender;
           var active = '';
           var maritalStatus = '';
+          var address = '';
           
           var fname = '';
           var lname = '';             
@@ -52,6 +53,7 @@
           p.height = getQuantityValueAndUnit(height[0]);   
           p.active = patient.active;
           p.maritalStatus = patient.maritalStatus;
+          p.address = patient.address;
         
           if (typeof systolicbp != 'undefined')  {
             p.systolicbp = systolicbp;
@@ -88,7 +90,8 @@
       ldl: {value: ''},
       hdl: {value: ''},
       active: {value: ''},
-      maritalStatus: {value: ''}
+      maritalStatus: {value: ''},
+      address : {value: ''}
     };
   }
 
@@ -134,6 +137,7 @@
     $('#hdl').html(p.hdl);  
     $('#active').html(p.active);  
     $('#maritalStatus').html(p.maritalStatus);
+    $('#address').html(p.address);    
   };
 
 })(window);
