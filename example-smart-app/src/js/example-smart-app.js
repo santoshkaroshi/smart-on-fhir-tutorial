@@ -31,6 +31,7 @@
           var active = '';
           var maritalStatus = '';
           var address = '';
+          var communication = '';
           
           var fname = '';
           var lname = '';             
@@ -56,6 +57,7 @@
           p.active = patient.active;
           p.maritalStatus = patient.maritalStatus;
           p.address = patient.address;
+          p.communication = patient.communication;
         
           if (typeof systolicbp != 'undefined')  {
             p.systolicbp = systolicbp;
@@ -95,7 +97,8 @@
       active: {value: ''},
       maritalStatus: {value: ''},
       address : {value: ''},
-      heartrate : {value: ''}
+      heartrate : {value: ''},
+      communication : {value: ''}
     };
   }
 
@@ -143,6 +146,8 @@
     $('#maritalStatus').html(p.maritalStatus);
     $('#address').html(p.address);  
     $('#heartrate').html(p.heartrate);
+    $('#communication').html(p.communication);
+    
   };
 
 })(window);
