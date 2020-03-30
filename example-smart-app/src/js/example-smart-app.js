@@ -18,7 +18,7 @@
                         $or: ['http://loinc.org|8302-2', 'http://loinc.org|8462-4',
                               'http://loinc.org|8480-6', 'http://loinc.org|2085-9',
                               'http://loinc.org|2089-1', 'http://loinc.org|55284-4',
-                              'http://loinc.org|8867-4']
+                              'http://loinc.org|8867-4','http://loinc.org|34566-0']
                       }
                     }
                   });
@@ -47,6 +47,7 @@
           var hdl = byCodes('2085-9');
           var ldl = byCodes('2089-1');
           var heartrate = byCodes('8867-4');
+           var vitalsigns = byCodes('34566-0');
 
           var p = defaultPatient();
           p.birthdate = patient.birthDate;
@@ -98,7 +99,8 @@
       maritalStatus: {value: ''},
       address : {value: ''},
       heartrate : {value: ''},
-      communication : {value: ''}
+      communication : {value: ''},
+      vitalsigns : {value: ''}
     };
   }
 
@@ -147,7 +149,7 @@
     $('#address').html(p.address);  
     $('#heartrate').html(p.heartrate);
     $('#communication').html(p.communication);
-    
+    $('#vitalsigns').html(p.vitalsigns);    
   };
 
 })(window);
