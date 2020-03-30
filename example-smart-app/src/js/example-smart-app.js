@@ -18,7 +18,7 @@
                         $or: ['http://loinc.org|8302-2', 'http://loinc.org|8462-4',
                               'http://loinc.org|8480-6', 'http://loinc.org|2085-9',
                               'http://loinc.org|2089-1', 'http://loinc.org|55284-4',
-                              'http://loinc.org|45701-0']
+                              'http://loinc.org|8867-4']
                       }
                     }
                   });
@@ -45,7 +45,7 @@
           var diastolicbp = getBloodPressureValue(byCodes('55284-4'),'8462-4');
           var hdl = byCodes('2085-9');
           var ldl = byCodes('2089-1');
-          var fever = byCodes('45701-0');
+          var heartrate = byCodes('8867-4');
 
           var p = defaultPatient();
           p.birthdate = patient.birthDate;
@@ -67,7 +67,7 @@
 
           p.hdl = getQuantityValueAndUnit(hdl[0]);
           p.ldl = getQuantityValueAndUnit(ldl[0]);
-          p.fever = getQuantityValueAndUnit(fever[0]);
+          p.heartrate = getQuantityValueAndUnit(heartrate[0]);
 
           ret.resolve(p);
         });
@@ -95,7 +95,7 @@
       active: {value: ''},
       maritalStatus: {value: ''},
       address : {value: ''},
-      fever : {value: ''}
+      heartrate : {value: ''}
     };
   }
 
@@ -142,7 +142,7 @@
     $('#active').html(p.active);  
     $('#maritalStatus').html(p.maritalStatus);
     $('#address').html(p.address);  
-    $('#fever').html(p.fever);
+    $('#heartrate').html(p.heartrate);
   };
 
 })(window);
