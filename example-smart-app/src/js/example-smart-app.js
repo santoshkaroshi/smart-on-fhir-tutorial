@@ -57,7 +57,7 @@
           p.active = patient.active;
           p.maritalStatus = patient.maritalStatus;
           p.address = patient.address;
-          p.communication = patient.communication;
+          p.communication = patient.communication.language;
         
           if (typeof systolicbp != 'undefined')  {
             p.systolicbp = systolicbp;
